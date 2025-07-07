@@ -4,7 +4,7 @@ BACKUP_SCRIPT="./bin/backup.sh"
 
 echo "Running test: backup README.md"
 
-$BACKUP_SCRIPT ../README.md
+$BACKUP_SCRIPT ./README.md
 
 if [ $? -eq 0 ]; then
     echo "Test passed: backup script ran successfully."
