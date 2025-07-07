@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BACKUP_SCRIPT="../bin/backup.sh"
+BACKUP_SCRIPT="./bin/backup.sh"
 
 echo "Running test: backup README.md"
 
