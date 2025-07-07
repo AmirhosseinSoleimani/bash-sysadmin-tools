@@ -14,9 +14,11 @@ jobs:
      - name: Checkout repository
        uses: actions/checkout@v3
 
+     - name: set execute permission to backup script
+       run: chmod +x ./bin/backup.sh
 
      - name: Set execute permission to test script
-       run: chmod +x tests/test_backup.sh
+       run: chmod +x ./tests/test_backup.sh
 
 
      - name: Run backup test script       
