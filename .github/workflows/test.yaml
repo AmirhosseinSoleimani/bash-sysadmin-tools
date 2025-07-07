@@ -1,0 +1,25 @@
+name: Run Bash Scripts Tests
+
+on:
+  pull_request:
+    branches:
+      - test
+
+jobs:
+  test:
+    run-on: ubuntu-latest
+
+
+    steps:
+     - name: Checkout repository
+       uses: action/checkout@v3
+
+
+     - name: Set execute permission to test script
+       run: chmod +x tests/test_backup.sh
+
+
+     - name: Run backup test script       
+       run: ./Tests/test_backup.sh 
+
+  
