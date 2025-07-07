@@ -20,6 +20,6 @@ jobs:
 
 
      - name: Run backup test script       
-       run: ./Tests/test_backup.sh 
+       run: ./tests/test_backup.sh 
 
   
