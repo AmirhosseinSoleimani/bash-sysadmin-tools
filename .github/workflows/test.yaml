@@ -1,0 +1,25 @@
+name: Run Bash Scripts Tests
+
+on:
+  pull_request:
+    branches:
+      - test
+
+jobs:
+  test-bash-scripts:
+    run-on: ubuntu-latest
+    steps:
+     - name: Checkout code
+       uses: action/checkout@v3
+
+     - name: Set execute permission
+       run: chmod +x bin/*.sh tests/*.sh || true
+
+     - name: Run tests       
+       run: |
+        for testscript in test/*.sh; do
+          echo "Running $testscript"
+          bash "$testscript"
+        done   
+
+  
