@@ -1,0 +1,8 @@
+manitor:
+  interval: 60
+  log_file: "logs/system_monitor.log"
+
+stats:
+  cpu: true
+  memory: true
+  disk: true
